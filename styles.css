@@ -1,0 +1,133 @@
+/* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.changelog-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #777;
+}
+
+.timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 25%;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background-color: #000;
+    transform: translateX(-50%); 
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    width: 100%;
+}
+
+.timeline-item .date {
+    color: #777;
+    font-size: 1.1em;
+    text-align: left;
+    width: 150px;
+}
+
+.timeline-item .event {
+    color: #000;
+    font-size: 1.2em;
+    text-align: left;
+    margin-left: 30px; 
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -9px;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    background-color: #000;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 0 3px #fff;
+}
+
+.complete-changelog {
+    display: block;
+    margin: 30px auto;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.complete-changelog:hover {
+    background-color: #333;
+}
+
+@media screen and (max-width: 768px) {
+    .changelog-container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .timeline-item .date {
+        font-size: 1.1em;
+    }
+
+    .timeline-item .event {
+        font-size: 1em;
+    }
+
+    .complete-changelog {
+        font-size: 1em;
+    }
+}
